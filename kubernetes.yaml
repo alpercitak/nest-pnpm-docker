@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nest-pnpm-docker-service
+spec:
+  selector:
+    app: nest-pnpm-docker
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: LoadBalancer
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nest-pnpm-docker
+  labels:
+    app: nest-pnpm-docker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nest-pnpm-docker
+  template:
+    metadata:
+      labels:
+        app: nest-pnpm-docker
+    spec:
+      containers:
+      - name: nest-pnpm-docker-container
+        image: alpercitak/nest-pnpm-docker
+        env:
+        - name: NODE_ENV
+          value: "production"
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+      serviceAccountName: default

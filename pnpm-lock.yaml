@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@nestjs/common':
         specifier: ^8.0.0
-        version: 8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2)
+        version: 8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/core':
         specifier: ^8.0.0
-        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.1.14)(rxjs@7.8.2)
+        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nestjs/platform-express':
         specifier: ^8.0.0
-        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)
+        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)
       reflect-metadata:
-        specifier: ^0.1.13
-        version: 0.1.14
+        specifier: ^0.2.0
+        version: 0.2.2
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
@@ -35,7 +35,7 @@ importers:
         version: 8.0.11(chokidar@3.5.3)(typescript@4.9.5)
       '@nestjs/testing':
         specifier: ^8.0.0
-        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)(@nestjs/platform-express@8.4.7)
+        version: 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)(@nestjs/platform-express@8.4.7)
       '@types/express':
         specifier: ^4.17.13
         version: 4.17.25
@@ -2278,8 +2278,8 @@ packages:
     resolution: {integrity: sha512-HFM8rkZ+i3zrV+4LQjwQ0W+ez98pApMGM3HUrN04j3CqzPOzl9nmP15Y8YXNm8QHGv/eacOVEjqhmWpkRV0NAw==}
     engines: {node: '>= 0.10'}
 
-  reflect-metadata@0.1.14:
-    resolution: {integrity: sha512-ZhYeb6nRaXCfhnndflDK8qI6ZQ/YcWZCISRAWICW9XYqMUwjZM9Z0DveWX/ABN01oxSHwVxKQmxeYZSsm0jh5A==}
+  reflect-metadata@0.2.2:
+    resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
 
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
@@ -3376,38 +3376,38 @@ snapshots:
       - vue-template-compiler
       - webpack-cli
 
-  '@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2)':
+  '@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:
       axios: 0.27.2
       iterare: 1.2.1
-      reflect-metadata: 0.1.14
+      reflect-metadata: 0.2.2
       rxjs: 7.8.2
       tslib: 2.4.0
       uuid: 8.3.2
     transitivePeerDependencies:
       - debug
 
-  '@nestjs/core@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.1.14)(rxjs@7.8.2)':
+  '@nestjs/core@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.2.2)(rxjs@7.8.2)':
     dependencies:
-      '@nestjs/common': 8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2)
+      '@nestjs/common': 8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2)
       '@nuxtjs/opencollective': 0.3.2
       fast-safe-stringify: 2.1.1
       iterare: 1.2.1
       object-hash: 3.0.0
       path-to-regexp: 3.2.0
-      reflect-metadata: 0.1.14
+      reflect-metadata: 0.2.2
       rxjs: 7.8.2
       tslib: 2.4.0
       uuid: 8.3.2
     optionalDependencies:
-      '@nestjs/platform-express': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)
+      '@nestjs/platform-express': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)
     transitivePeerDependencies:
       - encoding
 
-  '@nestjs/platform-express@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)':
+  '@nestjs/platform-express@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)':
     dependencies:
-      '@nestjs/common': 8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2)
-      '@nestjs/core': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.1.14)(rxjs@7.8.2)
+      '@nestjs/common': 8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/core': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       body-parser: 1.20.0
       cors: 2.8.5
       express: 4.18.1
@@ -3438,13 +3438,13 @@ snapshots:
     transitivePeerDependencies:
       - chokidar
 
-  '@nestjs/testing@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)(@nestjs/platform-express@8.4.7)':
+  '@nestjs/testing@8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)(@nestjs/platform-express@8.4.7)':
     dependencies:
-      '@nestjs/common': 8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2)
-      '@nestjs/core': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.1.14)(rxjs@7.8.2)
+      '@nestjs/common': 8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2)
+      '@nestjs/core': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/platform-express@8.4.7)(reflect-metadata@0.2.2)(rxjs@7.8.2)
       tslib: 2.4.0
     optionalDependencies:
-      '@nestjs/platform-express': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.1.14)(rxjs@7.8.2))(@nestjs/core@8.4.7)
+      '@nestjs/platform-express': 8.4.7(@nestjs/common@8.4.7(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@8.4.7)
 
   '@noble/hashes@1.8.0': {}
 
@@ -5617,7 +5617,7 @@ snapshots:
     dependencies:
       resolve: 1.22.11
 
-  reflect-metadata@0.1.14: {}
+  reflect-metadata@0.2.2: {}
 
   require-directory@2.1.1: {}
 

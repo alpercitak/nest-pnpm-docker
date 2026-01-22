@@ -2,28 +2,38 @@ name: build
 
 on:
   push:
-    branches:
-      - "**"
-
+    branches: [main]
   pull_request:
-    branches:
-      - "**"
+    branches: ["**"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    timeout-minutes: 15
+    timeout-minutes: 10
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout
+        uses: actions/checkout@v6
 
-      - run: corepack enable
-
-      - uses: actions/setup-node@v6
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: "lts/*"
-          cache: pnpm
+          run_install: false
 
-      - run: pnpm i --frozen-lockfile
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: "pnpm"
 
-      - run: pnpm build
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build

@@ -1,0 +1,19 @@
+name: setup
+on:
+  workflow_call:
+    inputs:
+      run-command:
+        required: true
+        type: string
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "pnpm"
+      - run: pnpm i --frozen-lockfile
+      - run: ${{ inputs.run-command }}

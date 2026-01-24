@@ -1,4 +1,4 @@
-name: build
+name: lint
 on:
   push:
     branches: [main]
@@ -7,4 +7,4 @@ jobs:
   setup:
     uses: ./.github/workflows/_setup.yaml
     with:
-      run-command: pnpm build
+      run-command: pnpm lint

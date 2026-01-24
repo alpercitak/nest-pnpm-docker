@@ -1,0 +1,10 @@
+name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  setup:
+    uses: ./.github/workflows/_setup.yaml
+    with:
+      run-command: pnpm test

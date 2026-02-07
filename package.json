@@ -55,7 +55,7 @@
     "tsconfig-paths": "^4.0.0",
     "typescript": "^5.0.0"
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.1",
   "jest": {
     "moduleFileExtensions": [
       "js",
